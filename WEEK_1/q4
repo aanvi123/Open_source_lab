@@ -1,0 +1,27 @@
+Extracted one open source project from Github. Performed the reverse engineering of the same.
+
+(Project Title):
+The Final Brain Cell :  Terminal Quiz Game
+
+
+(GitHub Link):
+https://github.com/nikumu/the-final-brain-cell
+
+
+(Language):
+C++
+
+
+(Structure):
+Single-file project (main.cpp)
+Function-based logic for questions
+
+
+(Flowchart):
+Start → Display Questions → Get Input → Check Answer → Update Score → Show Result → End
+
+
+(What I Learned):
+How to take and evaluate multiple-choice input
+Basic scoring logic
+Simple game loops in C++
