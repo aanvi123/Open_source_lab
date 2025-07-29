@@ -6,6 +6,8 @@ Original Author: Manav Patnaik
 CALCULATOR IN C:
 This project is a terminal-based calculator written in **C**, capable of performing 14 mathematical operations.
 
+Github link :
+https://github.com/sridhar-5/calculator-GitWorkshop
 
 Program Flow:
 1. User enters two numbers (a and b)
