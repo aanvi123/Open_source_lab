@@ -1,0 +1,38 @@
+Author:
+Modified by Aanvi Agrawal
+Original Author: Manav Patnaik
+
+
+CALCULATOR IN C:
+This project is a terminal-based calculator written in **C**, capable of performing 14 mathematical operations.
+
+
+Program Flow:
+1. User enters two numbers (a and b)
+2. All 14 operations are computed
+3. Results are printed with formatted output.
+
+Sample Input:
+Enter two numbers: 5.5 2
+
+ Sample Output
+Add: 5.50 + 2.00 = 7.50
+Subtract: 5.50 - 2.00 = 3.50
+Multiply: 5.50 * 2.00 = 11.00
+Divide: 5.50 / 2.00 = 2.75
+Percentage: 5.50 of 2.00 = 275.00%
+Exponentiation: 5.50^2.00 = 30.25
+Sine(5.50) = -0.71
+Cosine(5.50) = 0.70
+Tangent(5.50) = -1.02
+Square Root(5.50) = 2.35
+Ceil(5.50) = 6.00
+Floor(5.50) = 5.00
+Absolute(-5.50) = 5.50
+Natural Exponent e^5.50 = 244.69
+
+What I Learned:
+How to use built-in math functions in C (math.h)
+Clean and modular function writing
+Avoiding common scanf and format specifier errors
+Compiling C projects using gcc with -lm
