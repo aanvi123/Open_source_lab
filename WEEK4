@@ -1,1 +1,108 @@
+WEEK 4
+
+
+#q1
+import numpy as np
+from collections import Counter
+
+print("NumPy Version:", np.__version__)
+user_input = input("Enter elements separated by space: ").split()
+freq = Counter(user_input)
+
+print("Frequency of each element:")
+for k, v in freq.items():
+    print(f"{k}: {v}")
+
+#q2
+
+binary = input("Enter a binary number: ")
+
+ones = binary.count('1')
+zeros = binary.count('0')
+result = '1' * ones + '0' * zeros
+print("Output:", result)
+
+#q3
+
+string = input("Enter a string: ")
+n = int(input("Enter index to remove: "))
+result = string[:n] + string[n+1:]
+print("Result:", result)
+
+#q4
+
+import numpy as np
+
+array = np.ones((3, 3))
+print("Original array:")
+print(array)
+
+border_array = np.ones((5, 5))
+border_array[1:-1, 1:-1] = 0
+print("\nArray with 1 on border and 0 inside:")
+print(border_array)
+
+
+#q5
+
+import numpy as np
+
+array1 = np.array([0, 10, 20, 40, 60])
+array2 = np.array([0, 40])
+
+print("Array1:", array1)
+print("Array2:", array2)
+print("Compare each element of array1 and array2:")
+print(np.in1d(array1, array2))
+
+
+#q6
+
+import numpy as np
+
+array1 = np.array([0, 10, 20, 40, 60, 80])
+array2 = np.array([10, 30, 40, 50, 70])
+
+result = np.setxor1d(array1, array2)
+print("Unique values that are in only one (not both) of the input arrays:")
+print(result)
+
+#q7
+
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+result = np.column_stack((a, b))
+print("Stacked arrays column-wise:")
+print(result)
+
+
+#q8
+
+import numpy as np
+
+r = int(input("Enter number of rows: "))
+c = int(input("Enter number of columns: "))
+
+print("Enter the elements row-wise:")
+matrix = []
+for i in range(r):
+    row = list(map(float, input().split()))
+    matrix.append(row)
+
+A = np.array(matrix)
+print("Matrix:\n", A)
+
+print("Rank of matrix:", np.linalg.matrix_rank(A))
+print("Trace of matrix:", np.trace(A))
+if r == c:
+    print("Determinant of matrix:", np.linalg.det(A))
+else:
+    print("Determinant: Not defined for non-square matrix")
+
+
+
+
 
