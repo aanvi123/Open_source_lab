@@ -1,1 +1,156 @@
+WEEK 5
+
+#Q1
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Data
+X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
+C, S = np.cos(X), np.sin(X)
+
+# Plot
+plt.plot(X, C)
+plt.plot(X, S)
+plt.title("Simple Sine and Cosine Plot")
+plt.xlabel("X values (radians)")
+plt.ylabel("Y values")
+plt.show()
+
+#Q2
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
+C, S = np.cos(X), np.sin(X)
+
+plt.figure(figsize=(8, 6), dpi=80)
+plt.subplot(1, 1, 1)
+
+plt.plot(X, C, color="blue", linewidth=1.0, linestyle="-")
+plt.plot(X, S, color="green", linewidth=1.0, linestyle="-")
+
+plt.xlim(-4.0, 4.0)
+plt.xticks(np.linspace(-4, 4, 9, endpoint=True))
+plt.ylim(-1.0, 1.0)
+plt.yticks(np.linspace(-1, 1, 5, endpoint=True))
+
+plt.title("Sine and Cosine with Figure Settings")
+plt.savefig("exercise_2.png", dpi=72)
+plt.show()
+
+
+#Q3
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
+C, S = np.cos(X), np.sin(X)
+
+plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-", label="cosine")
+plt.plot(X, S, color="red", linewidth=2.5, linestyle="-", label="sine")
+
+plt.legend(loc='upper left')
+plt.title("Sine and Cosine with Legends")
+plt.show()
+
+
+#Q4
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 256
+X = np.linspace(-np.pi, np.pi, n, endpoint=True)
+Y = np.sin(2 * X)
+
+plt.plot(X, Y + 1, color='blue', alpha=1.00)
+plt.plot(X, Y - 1, color='blue', alpha=1.00)
+plt.title("Regular Plot Example")
+plt.show()
+
+
+#Q5
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 1024
+X = np.random.normal(0, 1, n)
+Y = np.random.normal(0, 1, n)
+
+plt.scatter(X, Y, color='purple', alpha=0.6)
+plt.title("Scatter Plot")
+plt.xlabel("X values")
+plt.ylabel("Y values")
+plt.show()
+
+#Q6
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 12
+X = np.arange(n)
+Y1 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+Y2 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+
+plt.bar(X, +Y1, facecolor='#9999ff', edgecolor='white')
+plt.bar(X, -Y2, facecolor='#ff9999', edgecolor='white')
+
+plt.title("Bar Chart Example")
+plt.show()
+
+
+#Q7
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.array([-np.pi, -np.pi/2, -np.pi/4, 0, np.pi/4, np.pi/2, np.pi])
+
+
+Y_tan = np.tan(X)
+Y_cot = 1 / np.tan(X)
+Y_sec = 1 / np.cos(X)
+Y_cosec = 1 / np.sin(X)
+
+plt.plot(X, Y_tan, label='tan(x)', color='blue')
+plt.plot(X, Y_cot, label='cot(x)', color='red')
+plt.plot(X, Y_sec, label='sec(x)', color='green')
+plt.plot(X, Y_cosec, label='cosec(x)', color='purple')
+
+plt.title("Trigonometric Functions")
+plt.xlabel("X (radians)")
+plt.ylabel("Y values")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+#Q8
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+methods = ['A', 'B', 'C', 'D']
+result1 = [2, 5, 8, 5]
+result2 = [3, 2, 5, 7]
+
+x = np.arange(len(methods))
+width = 0.35
+
+plt.bar(x - width/2, result1, width, label='Result1', color='skyblue')
+plt.bar(x + width/2, result2, width, label='Result2', color='orange')
+
+plt.xlabel("Method")
+plt.ylabel("Results")
+plt.title("Method vs Results Comparison")
+plt.xticks(x, methods)
+plt.legend()
+plt.show()
+
+
 
